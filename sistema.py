@@ -32,9 +32,9 @@ class Sistema:
     def identificarPaciente(self,y):
         for p in self.__lista_pacientes:
             if y == p.verCedula():
-                return True
-            else:
                 return False
+            else:
+                return True
                 
                 
 
@@ -63,11 +63,11 @@ def main():
     mi_sistema = Sistema()
 
     while True:
-        opcion = int(input("1. Nuevo paciente\n - 2. Numero de paciente\n - 3. Datos paciente\n - 4. Salir:  \n" "- 5. Buscar paciente:  \n"))
+        opcion = int(input("1. Nuevo paciente\n - 2. Numero de paciente\n - 3. Datos paciente\n - 4. Salir:  \n" "- 5.))
         if opcion == 1:
             cedula = int(input("Ingrese la cedula: "))
             respuesta= mi_sistema.identificarPaciente(cedula)
-            if respuesta == True:
+            if respuesta == False:
                 nombre = input("Ingrese el nombre: ")    
                 genero = input("Ingrese el genero: ")
                 servicio = input("Ingrese el servicio: ")
@@ -85,15 +85,6 @@ def main():
             print("Ahora hay: " + str(mi_sistema.verNumeroPacientes()))
         elif opcion == 3:
             mi_sistema.verDatosPaciente()
-        elif opcion == 5:
-            c =int(input("ingrese la cedula del paciente:"))
-            buscar = mi_sistema.identificarPaciente(c)
-            p = mi_sistema.verDatosPaciente(c)
-            if buscar == False:
-                print("Nombre: " + p.verNombre())
-                print("Cedula: " + str(p.verNombre()))
-            else:
-                print("El paciente no se encuentra en el sistema")
         elif opcion == 4:
             break
         else:
