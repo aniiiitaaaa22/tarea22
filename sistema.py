@@ -67,7 +67,7 @@ def main():
         if opcion == 1:
             cedula = int(input("Ingrese la cedula: "))
             respuesta= mi_sistema.identificarPaciente(cedula)
-            if respuesta == False:
+            if respuesta == True:
                 nombre = input("Ingrese el nombre: ")    
                 genero = input("Ingrese el genero: ")
                 servicio = input("Ingrese el servicio: ")
@@ -89,7 +89,7 @@ def main():
             c =int(input("ingrese la cedula del paciente:"))
             buscar = mi_sistema.identificarPaciente(c)
             p = mi_sistema.verDatosPaciente(c)
-            if buscar == True:
+            if buscar == False:
                 print("Nombre: " + p.verNombre())
                 print("Cedula: " + str(p.verNombre()))
             else:
