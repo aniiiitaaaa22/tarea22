@@ -63,7 +63,7 @@ def main():
     mi_sistema = Sistema()
 
     while True:
-        opcion = int(input("1. Nuevo paciente\n - 2. Numero de paciente\n - 3. Datos paciente\n - 4. Salir:  \n" ))
+        opcion = int(input("1. Nuevo paciente\n - 2. Numero de paciente\n - 3. Datos paciente\n - 4. Salir:  \n"))
         if opcion == 1:
             cedula = int(input("Ingrese la cedula: "))
             respuesta= mi_sistema.identificarPaciente(cedula)
