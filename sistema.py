@@ -90,7 +90,10 @@ def main():
             buscar = mi_sistema.identificarPaciente(c)
             p = mi_sistema.verDatosPaciente(c)
             if buscar == True:
-                print("Nombre: " +)
+                print("Nombre: " + p.verNombre())
+                print("Cedula: " + str(p.verNombre()))
+            else:
+                print("El paciente no se encuentra en el sistema")
         elif opcion == 4:
             break
         else:
